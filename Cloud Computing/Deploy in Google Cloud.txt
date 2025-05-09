@@ -1,0 +1,37 @@
+open google cloud
+
+create new project and name it as new-project
+
+open Cloud shell and then type commands
+
+gcloud projects list
+
+open menu and navigate to API & Services  in that search APP Engine Admin API and enable it
+
+(comeback to cloud shell)
+gcloud set project project_id (project_id which is given through list) 
+
+Go back to console and see for APP Engine and click on that
+
+(return to cloud shell)
+gcloud app create
+
+7
+
+git clone https://github.com/MangeshMali18/my-project
+
+ls
+
+cd my-project
+
+ls
+
+cd Assignment4-A
+
+ls
+
+cat index.html
+
+python3 -m http.server 8080   (for html file)
+python3 (file name)           (for python file)
+npm start or node server.js   (for node.js file)

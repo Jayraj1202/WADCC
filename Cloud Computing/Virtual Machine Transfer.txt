@@ -1,0 +1,26 @@
+Open Virtual Machine and in that open Ubuntu
+
+Go to Devices -> Shared Folders -> Shared Folder settings
+
+then the small screen of shared folder will open in that right side small "blue" color symbol click it
+
+then select folder path "Other" and then choose any folder and select it
+
+in the ubuntu the folder name will be occurred below folder path
+
+	Click on Auto-count and on Make permanent
+Click OK
+
+Click on Devices and see it has Install guest addition at below click it
+
+Open Terminal
+
+cd /Documents     OR     cd /media
+
+ls
+
+sudo mkdir mynewshare  
+ls
+
+sudo mount -t vboxsf name_of_folder_in_windows  mynewshare
+	  

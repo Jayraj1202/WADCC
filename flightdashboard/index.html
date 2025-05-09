@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air Flight Booking Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">FlyNow ✈️</a>
+    <form class="d-flex ms-auto" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search Flights" aria-label="Search">
+      <button class="btn btn-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="text-white d-flex flex-column justify-content-center align-items-center" 
+         style="height: 60vh; background-image: url('https://static.vecteezy.com/system/resources/thumbnails/020/760/032/small_2x/passenger-plane-on-a-blue-gray-background-passenger-transportation-business-and-tourism-airline-operators-air-carriers-world-communication-and-commercial-flights-travel-photo.jpg'); background-size: cover; background-position: center; position: relative;">
+  
+  <div style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
+
+  <div style="z-index: 2; text-align: center;">
+    <h1 class="display-5 fw-bold">Welcome to FlyNow</h1>
+    <p class="lead">Book domestic and international flights in seconds</p>
+    <button class="btn btn-primary btn-lg">Book Now</button>
+  </div>
+</section>
+
+
+
+<!-- Flight Cards -->
+<div class="container mt-4">
+  <h2 class="mb-3">Available Flights</h2>
+  <div class="row g-3">
+
+<!-- Flight 1 -->
+<div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Pune ✈️ Delhi</h5>
+        <p class="card-text">
+          Airline: Air India<br>
+          Flight No: AI-202<br>
+          Departure: 09:30 AM | Arrival: 11:30 AM<br>
+          Duration: 2h<br>
+          Stops: Non-stop<br>
+          Price: ₹5,000<br>
+          Status: <span class="text-success">Available</span>
+        </p>
+        <button class="btn btn-success w-100">Book Now</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Flight 2 -->
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Mumbai ✈️ Bangalore</h5>
+        <p class="card-text">
+          Airline: IndiGo<br>
+          Flight No: 6E-106<br>
+          Departure: 01:45 PM | Arrival: 03:30 PM<br>
+          Duration: 1h 45m<br>
+          Stops: Non-stop<br>
+          Price: ₹4,200<br>
+          Status: <span class="text-success">Available</span>
+        </p>
+        <button class="btn btn-success w-100">Book Now</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Flight 3 -->
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Chennai ✈️ Goa</h5>
+        <p class="card-text">
+          Airline: SpiceJet<br>
+          Flight No: SG-456<br>
+          Departure: 05:00 PM | Arrival: 06:40 PM<br>
+          Duration: 1h 40m<br>
+          Stops: Non-stop<br>
+          Price: ₹3,800<br>
+          Status: <span class="text-warning">Few Seats Left</span>
+        </p>
+        <button class="btn btn-warning w-100">Book Now</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Flight 4 -->
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Hyderabad ✈️ Jaipur</h5>
+        <p class="card-text">
+          Airline: Vistara<br>
+          Flight No: UK-301<br>
+          Departure: 07:30 AM | Arrival: 10:00 AM<br>
+          Duration: 2h 30m<br>
+          Stops: 1 Stop<br>
+          Price: ₹6,100<br>
+          Status: <span class="text-success">Available</span>
+        </p>
+        <button class="btn btn-success w-100">Book Now</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Flight 5 -->
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Delhi ✈️ Dubai</h5>
+        <p class="card-text">
+          Airline: Emirates<br>
+          Flight No: EK-517<br>
+          Departure: 10:30 PM | Arrival: 01:10 AM<br>
+          Duration: 3h 10m<br>
+          Stops: Non-stop<br>
+          Price: ₹18,000<br>
+          Status: <span class="text-danger">Sold Out</span>
+        </p>
+        <button class="btn btn-secondary w-100" disabled>Sold Out</button>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Add more flights similarly -->
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center p-3 mt-5">
+  © 2025 FlyNow | Designed by Yash
+</footer>
+
+</body>
+</html>

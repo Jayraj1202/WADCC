@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Department Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile CSS & JS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    .department-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 15px;
+      gap: 10px;
+    }
+
+    .dept-btn {
+      flex: 1 1 18%;
+      min-width: 100px;
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 8px;
+      padding: 20px 10px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .dept-btn:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .dept-btn {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .dept-btn {
+        flex: 1 1 100%;
+      }
+    }
+
+    .content-box {
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      margin: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header" data-theme="b">
+    <h1>Departments</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <div class="department-grid">
+      <a href="#it" class="dept-btn ui-btn ui-corner-all">💻 IT</a>
+      <a href="#comp" class="dept-btn ui-btn ui-corner-all">🖥 COMP</a>
+      <a href="#etc" class="dept-btn ui-btn ui-corner-all">📡 ETC</a>
+      <a href="#mech" class="dept-btn ui-btn ui-corner-all">⚙️ MECH</a>
+      <a href="#elect" class="dept-btn ui-btn ui-corner-all">🔌 ELECT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Department Pages -->
+
+<div data-role="page" id="it">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>IT Department</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <div class="content-box">
+      <p>Information Technology focuses on software development, data science, networks, and cybersecurity.</p>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="comp">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Computer Department</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <div class="content-box">
+      <p>Computer Engineering covers programming, operating systems, AI, and hardware architecture.</p>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="etc">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>ETC Department</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <div class="content-box">
+      <p>ETC (Electronics & Telecommunication) focuses on digital systems, communication networks, and VLSI.</p>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="mech">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Mechanical Department</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <div class="content-box">
+      <p>Mechanical Engineering involves machine design, manufacturing processes, and thermodynamics.</p>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="elect">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Electrical Department</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <div class="content-box">
+      <p>Electrical Engineering deals with circuits, power systems, automation, and electronics.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

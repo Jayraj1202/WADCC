@@ -1,0 +1,45 @@
+/* Basic styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero .btn {
+    margin-top: 20px;
+}
+
+/* Offer Cards */
+.offers .card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.offers .card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #212529;
+    color: white;
+}

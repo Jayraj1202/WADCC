@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>ShopNow</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+    </div>
+  </nav>
+
+  <!-- Main Dashboard -->
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li data-category="All" class="active">All</li>
+        <li data-category="Electronics">Electronics</li>
+        <li data-category="Fashion">Fashion</li>
+        <li data-category="Home">Home</li>
+        <li data-category="Sports">Sports</li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <main class="main-content">
+      <h2>Products</h2>
+      <div class="products" id="productList">
+        <!-- Products will be injected by JS -->
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <p id="summaryTotal">Total Products: 0</p>
+        <p id="summaryPrice">Total Price: $0</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ShopNow. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

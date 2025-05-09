@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MYCITY - Pune</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;700&display=swap" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">MYCITY</a>
+    
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#landmarks">Landmarks</a></li>
+        <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero text-white text-center">
+  <div class="container">
+    <h1 class="display-3">Welcome to Pune</h1>
+    <p class="lead">The cultural capital of Maharashtra</p>
+  </div>
+</header>
+
+<!-- Landmarks Section -->
+<section class="container py-5" id="landmarks">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card landmark-card">
+        <img src="https://punetourism.co.in/images/places-to-visit/headers/shaniwar-wada-pune-tourism-entry-fee-timings-holidays-reviews-header.jpg" class="card-img-top" alt="Shaniwar Wada" />
+        <div class="card-body">
+          <h5 class="card-title text-danger">Shaniwar Wada</h5>
+          <button class="btn btn-outline-primary" onclick="showInfo('wada')">View Info</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card landmark-card">
+        <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2017/08/14193934/14082017_AgaKhanPalace_01.jpg" class="card-img-top" alt="Aga Khan Palace" />
+        <div class="card-body">
+          <h5 class="card-title text-success">Aga Khan Palace</h5>
+          <button class="btn btn-outline-success" onclick="showInfo('palace')">View Info</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card landmark-card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/40/01/58/caption.jpg?w=1200&h=-1&s=1" class="card-img-top" alt="Sinhagad Fort" />
+        <div class="card-body">
+          <h5 class="card-title text-warning">Sinhagad Fort</h5>
+          <button class="btn btn-outline-warning" onclick="showInfo('fort')">View Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Info Section -->
+<section class="container py-3 text-center" id="info"></section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-4">
+  &copy; 2025 MYCITY - Created by Yash
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+function showInfo(place) {
+  let info = {
+    wada: "<h3>Shaniwar Wada</h3><p>A historic fortification in Pune built in 1732 by the Peshwas of the Maratha Empire.</p>",
+    palace: "<h3>Aga Khan Palace</h3><p>A majestic building with great historical significance, where Mahatma Gandhi was imprisoned.</p>",
+    fort: "<h3>Sinhagad Fort</h3><p>A hill fortress located near Pune, known for its battle history and trekking views.</p>"
+  };
+  document.getElementById('info').innerHTML = info[place];
+}
+</script>
+</body>
+</html>
