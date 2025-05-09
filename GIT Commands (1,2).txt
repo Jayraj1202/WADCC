@@ -1,0 +1,77 @@
+1)
+
+Go to https://github.com/
+
+Sign up and verify your email.
+
+Go to your GitHub homepage and click on “New” or go to: https://github.com/new
+
+Set: Repository name: e.g., my-project
+
+Visibility: Public or Private
+
+Do NOT initialize with README (you'll do this locally). Click Create repository.
+
+Open VS Code.
+
+Use File > Open Folder to open your project directory.
+
+Open Terminal
+
+git init
+
+If error occured then the git is not installed so install it
+Step 1: Install Git
+Go to the official Git website:
+👉 https://git-scm.com/downloads
+
+Download the appropriate installer for Windows.
+
+Run the installer and use the default options, but make sure:
+
+✅ "Add Git to PATH" is selected during installation.
+
+✅ Choose "Git from the command line and also from 3rd-party software" if prompted.
+
+Close and reopen VS Code completely.
+
+Open your terminal again and run:
+
+git --version
+
+git init
+
+git add .
+
+git config --global user.name "Ravi Patil"
+git config --global user.email "ravi.patil@gmail.com"
+
+git commit -m "Initial commit"
+
+git remote add origin https://github.com/your-username/my-project.git
+
+git branch -M main
+
+git push -u origin main
+
+
+2)
+
+Do all the above steps (just write before git add.  echo "Hello GitHub!" > index.html  )
+
+git checkout -b feature1
+
+echo "This is a new feature." >> index.html
+
+git add .
+git commit -m "Add feature1 content"
+
+git push -u origin feature1
+
+git checkout main
+git pull origin main            # ensure you're up-to-date
+git merge feature1
+
+git push
+
+git pull origin main

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All About Tennis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+    }
+
+    .header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .navbar {
+      background-color: #34495e;
+    }
+
+    .navbar a {
+      color: white;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card-img-top:hover {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      background-color: #ecf0f1;
+    }
+
+    .btn {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .content-section {
+      padding: 30px;
+    }
+
+    .player-bio {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .carousel-item img {
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .modal-body ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .modal-body ul li {
+      padding: 5px 0;
+    }
+
+    .countdown {
+      font-size: 2em;
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+    @media (max-width: 767px) {
+      .header, .footer {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>All About Tennis</h1>
+    <p>Explore the world of Tennis: Players, Achievements, Rules, and Grand Slams</p>
+  </div>
+
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Tennis Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#players">Players</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Grand Slam Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#countdown">Next Grand Slam</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Players Section -->
+  <div id="players" class="content-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Well-Known Tennis Players</h2>
+      <div class="row">
+        <!-- Player 1: Roger Federer -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.NbXNPgOexVsbwzADeZ6KXgHaFN?cb=iwc1&rs=1&pid=ImgDetMain" class="card-img-top" alt="Player 1">
+            <div class="card-body">
+              <h5 class="card-title">Roger Federer</h5>
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#player1Achievements">Achievements</button>
+              <p class="player-bio">Roger Federer is a Swiss professional tennis player, widely regarded as one of the greatest players in the sport.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 2: Serena Williams -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.FopJ_iKsirQsVZu77bpKMwHaEc?cb=iwc1&rs=1&pid=ImgDetMain" class="card-img-top" alt="Player 2">
+            <div class="card-body">
+              <h5 class="card-title">Serena Williams</h5>
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#player2Achievements">Achievements</button>
+              <p class="player-bio">Serena Williams is an American tennis player who is regarded as one of the greatest female athletes in history.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 3: Rafael Nadal -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.MbGEv5L5IDFJVZubDbVA_QHaFj?cb=iwc1&rs=1&pid=ImgDetMain" class="card-img-top" alt="Player 3">
+            <div class="card-body">
+              <h5 class="card-title">Rafael Nadal</h5>
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#player3Achievements">Achievements</button>
+              <p class="player-bio">Rafael Nadal is a Spanish professional tennis player, known as the "King of Clay" for his dominance on the surface.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Achievements Modals -->
+  <div class="modal fade" id="player1Achievements" tabindex="-1" aria-labelledby="player1AchievementsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="player1AchievementsLabel">Roger Federer Achievements</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>20 Grand Slam titles</li>
+            <li>310 weeks at World No. 1</li>
+            <li>8 Wimbledon titles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Player 2: Serena Williams -->
+  <div class="modal fade" id="player2Achievements" tabindex="-1" aria-labelledby="player2AchievementsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="player2AchievementsLabel">Serena Williams Achievements</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>23 Grand Slam singles titles (most by any player in the Open Era)</li>
+            <li>4 Olympic gold medals (1 in singles, 3 in doubles)</li>
+            <li>7 Wimbledon titles</li>
+            <li>Fastest woman to serve at 128.6 mph</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Player 3: Rafael Nadal -->
+  <div class="modal fade" id="player3Achievements" tabindex="-1" aria-labelledby="player3AchievementsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="player3AchievementsLabel">Rafael Nadal Achievements</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>22 Grand Slam singles titles</li>
+            <li>14 French Open titles (most in history)</li>
+            <li>2 Olympic gold medals (1 in singles, 1 in doubles)</li>
+            <li>Over 1,000 career wins</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rules" class="content-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Tennis Rules</h2>
+      <p>Tennis is played with a ball and racket. It involves two players (singles) or two teams of two players each (doubles)...</p>
+      <ul>
+        <li>A tennis match is played in sets.</li>
+        <li>Each set consists of games, where a player serves.</li>
+        <li>The objective is to win points by hitting the ball over the net and into the opponent's court.</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Grand Slam Schedule Section -->
+  <div id="schedule" class="content-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Grand Slam Schedules</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Grand Slam</th>
+            <th>Date</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Australian Open</td>
+            <td>January</td>
+            <td>Melbourne, Australia</td>
+          </tr>
+          <tr>
+            <td>French Open</td>
+            <td>May-June</td>
+            <td>Paris, France</td>
+          </tr>
+          <tr>
+            <td>Wimbledon</td>
+            <td>June-July</td>
+            <td>London, UK</td>
+          </tr>
+          <tr>
+            <td>US Open</td>
+            <td>August-September</td>
+            <td>New York, USA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Countdown Section for Next Grand Slam -->
+  <div id="countdown" class="content-section">
+    <div class="container text-center">
+      <h2>Next Grand Slam: Australian Open</h2>
+      <p>Countdown to the next Grand Slam:</p>
+      <div class="countdown" id="countdownTimer">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>&copy; 2025 All About Tennis | Created by Yash Kithe</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Countdown Timer (for Australian Open)
+    const countdownTimer = document.getElementById("countdownTimer");
+    const nextGrandSlamDate = new Date("2025-01-15T00:00:00Z");  // Example: Australian Open 2025
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeDifference = nextGrandSlamDate - now;
+
+      if (timeDifference <= 0) {
+        countdownTimer.textContent = "The event has started!";
+      } else {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        countdownTimer.textContent = `${days} days ${hours} hours ${minutes} minutes`;
+      }
+    }
+
+    setInterval(updateCountdown, 60000);  // Update every minute
+    updateCountdown();
+  </script>
+</body>
+</html>

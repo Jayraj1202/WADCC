@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Organic Farm</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Organic Farm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center text-white bg-dark p-5">
+    <h1 class="display-4">Welcome to Organic Farm</h1>
+    <p class="lead">Fresh, Healthy & Sustainable Produce</p>
+  </header>
+
+  <!-- Image Section -->
+  <section class="container py-5">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <img src="images/farm1.jpg" class="img-fluid rounded shadow image-fit" alt="Farm 1">
+        <h4 class="mt-3">Fresh Vegetables</h4>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="images/farm2.jpg" class="img-fluid rounded shadow image-fit" alt="Farm 2">
+        <h4 class="mt-3">Organic Fruits</h4>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="images/farm3.jpg" class="img-fluid rounded shadow image-fit" alt="Farm 3">
+        <h4 class="mt-3">Farm Visits</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers Button -->
+  <section class="text-center mb-5">
+    <button class="btn btn-success px-4 py-2" onclick="showOffers()">Click to View Offers</button>
+    <div id="offerDisplay" class="mt-3 text-primary fw-bold fs-5"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-success text-white text-center p-3">
+    &copy; 2025 Organic Farm. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

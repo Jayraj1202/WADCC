@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Restaurant Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile CSS & JS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .menu-item {
+      background-color: #ffffff;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .menu-item:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    .menu-item img {
+      width: 80%; /* Reduced the image size */
+      height: auto;
+      max-width: 250px; /* Ensure images don't exceed this width */
+      border-radius: 10px;
+    }
+
+    .menu-item h3 {
+      font-size: 1.4em;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .menu-item p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .details-content {
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .details-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .button {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 600px) {
+      .menu-item {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .menu-item img {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .menu-item img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Page (Menu List) -->
+<div data-role="page" id="home">
+  <div data-role="header" data-theme="b">
+    <h1>Restaurant Menu</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <!-- Menu Item 1 -->
+    <div class="menu-item">
+      <a href="#pizza" class="ui-btn ui-corner-all">
+        <img src="https://images.alphacoders.com/101/1016857.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Delicious pizza with mozzarella and fresh toppings.</p>
+      </a>
+    </div>
+
+    <!-- Menu Item 2 -->
+    <div class="menu-item">
+      <a href="#burger" class="ui-btn ui-corner-all">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/809/530/small_2x/a-flying-burger-with-all-the-layers-ai-generative-free-photo.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Juicy beef patty with fresh vegetables and cheese.</p>
+      </a>
+    </div>
+
+    <!-- Menu Item 3 -->
+    <div class="menu-item">
+      <a href="#pasta" class="ui-btn ui-corner-all">
+        <img src="https://cdn.pixabay.com/photo/2022/09/24/07/31/pasta-7475756_1280.jpg" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Italian pasta with creamy sauce and parmesan.</p>
+      </a>
+    </div>
+
+    <!-- Menu Item 4 -->
+    <div class="menu-item">
+      <a href="#sushi" class="ui-btn ui-corner-all">
+        <img src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/2876338/1360/906/m1/fpnw/wm1/cgzawlahlngwdhf2xw7ntr39a9kfnqtdsrzj5pbej4fzgt8yw7mfjsp6vmt6x6fm-.jpg?1498049306&s=652d992d9b94fc6c75e72f9ca5c33be2" alt="Sushi">
+        <h3>Sushi</h3>
+        <p>Fresh sushi with fish and rice, served with wasabi.</p>
+      </a>
+    </div>
+
+    <!-- Menu Item 5 -->
+    <div class="menu-item">
+      <a href="#salad" class="ui-btn ui-corner-all">
+        <img src="https://www.hungryhowies.com/sites/default/files/2022-08/HH_Website_Menu_Detail_Page_Garden_Salad_0.png" alt="Salad">
+        <h3>Salad</h3>
+        <p>Freshly mixed vegetables with a light dressing.</p>
+      </a>
+    </div>
+
+    <!-- Add more items here -->
+    <div class="menu-item">
+      <a href="#steak" class="ui-btn ui-corner-all">
+        <img src="https://via.placeholder.com/500x300.png?text=Steak" alt="Steak">
+        <h3>Fried Rice</h3>
+        <p>Grilled to perfection with a juicy tender texture.</p>
+      </a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#pancakes" class="ui-btn ui-corner-all">
+        <img src="https://via.placeholder.com/500x300.png?text=Pancakes" alt="Pancakes">
+        <h3>Pancakes</h3>
+        <p>Fluffy pancakes with maple syrup and fresh berries.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Pizza Details Page -->
+<div data-role="page" id="pizza">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Pizza</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <div class="details-content">
+      <img src="
+      https://images.alphacoders.com/101/1016857.jpg" alt="Pizza">
+      <h3>Delicious Pizza</h3>
+      <p>This pizza is made with fresh mozzarella, tomatoes, basil, and a crisp crust. Perfect for any occasion! Topped with your favorite ingredients like mushrooms, olives, and peppers.</p>
+      <a href="#" class="button">Order Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Burger Details Page -->
+<div data-role="page" id="burger">
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Burger</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <div class="details-content">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/023/809/530/small_2x/a-flying-burger-with-all-the-layers-ai-generative-free-photo.jpg" alt="Burger">
+      <h3>Juicy Burger</h3>
+      <p>Our signature burger comes with a juicy beef patty, fresh lettuce, tomatoes, and your choice of cheese. Served with crispy fries on the side.</p>
+      <a href="#" class="button">Order Now</a>
+    </div>
+  </div>
+</div>
+<div data-role="page" id="pizza">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="back">Back</a>
+      <h1>Pizza</h1>
+    </div>
+  
+    <div role="main" class="ui-content">
+      <div class="details-content">
+        <img src="
+        https://images.alphacoders.com/101/1016857.jpg" alt="Pizza">
+        <h3>Pasta</h3>
+        <p>This pizza is made with fresh mozzarella, tomatoes, basil, and a crisp crust. Perfect for any occasion! Topped with your favorite ingredients like mushrooms, olives, and peppers.</p>
+        <a href="#" class="button">Order Now</a>
+      </div>
+    </div>
+  </div>
+
+<!-- More pages for pasta, sushi, salad, etc. -->
+
+</body>
+</html>

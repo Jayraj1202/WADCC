@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waterfalls in India</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+      background-color: #00796b;
+    }
+    .navbar-brand, .nav-link {
+      color: #ffffff !important;
+    }
+    .header-section {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('https://images.unsplash.com/photo-1604456491267-1b7de7b6aa42') no-repeat center center;
+      background-size: cover;
+      color: white;
+    }
+    .header-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .card img {
+      height: 250px;
+      object-fit: cover;
+    }
+    .btn-how {
+      background-color: #00796b;
+      color: white;
+      border: none;
+    }
+    .btn-how:hover {
+      background-color: #004d40;
+    }
+    footer {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Indian Waterfalls</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-light rounded"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#locations">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="header-section">
+    <div class="container">
+      <h1 ><span style="color: rgb(135, 218, 200);">Explore Majestic Waterfalls of India</span></h1>
+    </div>
+  </section>
+
+  <section id="locations" class="container py-5">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-lg rounded-4">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.y0K6nOZ_uAsDV8mEi1WShAHaE8?cb=iwc1&rs=1&pid=ImgDetMain" class="card-img-top" alt="Jog Falls" />
+          <div class="card-body">
+            <h5 class="card-title">Jog Falls, Karnataka</h5>
+            <p class="card-text">One of the highest waterfalls in India with breathtaking views.</p>
+            <button class="btn btn-how" data-bs-toggle="modal" data-bs-target="#modalJog">How to Reach</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-lg rounded-4">
+          <img src="https://th.bing.com/th/id/R.6d139f493064a8ccfdff578c0f4589e3?rik=bTey%2fmnnd%2fsi%2fw&riu=http%3a%2f%2fst1.photogallery.ind.sh%2fwp-content%2fuploads%2findiacom%2fdudhsagar-falls-in-karnataka-india-201606-1466601488.jpg&ehk=BuITeQrft9MRzLIleLvRCq4YLTvPa78Jwovw2aWW61Q%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Dudhsagar Falls" />
+          <div class="card-body">
+            <h5 class="card-title">Dudhsagar Falls, Goa</h5>
+            <p class="card-text">Known for its milky appearance, situated on the Mandovi river.</p>
+            <button class="btn btn-how" data-bs-toggle="modal" data-bs-target="#modalDudhsagar">How to Reach</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-lg rounded-4">
+          <img src="https://natureworldwide.in/wp-content/uploads/2023/08/Bhimlat-Falls-Rajasthan.jpg" class="card-img-top" alt="Bhimlat Falls" />
+          <div class="card-body">
+            <h5 class="card-title">Bhimlat Falls, Rajasthan</h5>
+            <p class="card-text">An oasis in the desert land of Rajasthan, 60m high waterfall.</p>
+            <button class="btn btn-how" data-bs-toggle="modal" data-bs-target="#modalBhimlat">How to Reach</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="container py-4 text-center">
+    <h2>Contact Us</h2>
+    <p>Email: info@indianwaterfalls.com | Phone: +91 98765 43210</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Indian Waterfalls. All rights reserved.</p>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal fade" id="modalJog" tabindex="-1" aria-labelledby="modalJogLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalJogLabel">How to Reach Jog Falls</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Jog Falls is located in Shivamogga, Karnataka. It is well connected by road and train. The nearest airport is Hubli.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDudhsagar" tabindex="-1" aria-labelledby="modalDudhsagarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDudhsagarLabel">How to Reach Dudhsagar Falls</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Take a train to Kulem, then travel by jeep or trek to the falls. Best visited during the monsoon season.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalBhimlat" tabindex="-1" aria-labelledby="modalBhimlatLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBhimlatLabel">How to Reach Bhimlat Falls</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Reach Bundi by train or bus, then take local transport to Bhimlat Falls.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

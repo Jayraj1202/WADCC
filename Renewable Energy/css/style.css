@@ -1,0 +1,54 @@
+
+        body {
+            background: linear-gradient(135deg, #e0f7fa 0%, #fffde4 100%);
+            color: #222;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #70684b;
+        }
+        .navbar-brand, .nav-link, .navbar-toggler {
+            color: #fff !important;
+        }
+        .header-section {
+            background: #ecde12;
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+        .header-section h1 {
+            color: #0277bd;
+            font-weight: 700;
+        }
+        .solar-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(2,119,189,0.08);
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #bee98d;
+        }
+        .btn-offer {
+            background: #43a047;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 25px;
+            padding: 12px 32px;
+            transition: background 0.3s;
+        }
+        .btn-offer:hover {
+            background: #388e3c;
+        }
+        .offer-section {
+            margin-top: 30px;
+            display: none;
+        }
+        .footer {
+            background: #0288d1;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 40px;
+        }
+        
